@@ -613,16 +613,21 @@
                     
                     <button class="subject-btn" onclick="showUnits(6)">
                         <span>Environmental Science and Sustainability</span>
-                        <span class="units-badge">5 Units</span>
+                        <span class="units-badge">3 Units</span>
                     </button>
                     
                     <button class="subject-btn" onclick="showUnits(7)">
                         <span>Universal Human Values & Professional Ethics</span>
-                        <span class="units-badge">5 Units</span>
+                        <span class="units-badge">3 Units</span>
                     </button>
                     
                     <button class="subject-btn" onclick="showUnits(8)">
                         <span>Biology for Engineers</span>
+                        <span class="units-badge">3 Units</span>
+                    </button>
+
+                    <button class="subject-btn" onclick="showUnits(9)">
+                        <span>Applied Digital Logic Design</span>
                         <span class="units-badge">5 Units</span>
                     </button>
                 </div>
@@ -734,7 +739,8 @@ const subjects = {
     5: { name: "Introduction to Python Programming", units: ["Unit 1", "Unit 2", "Unit 3", "Unit 4", "Unit 5"] },
     6: { name: "Environmental Science and Sustainability", units: ["Unit 1", "Unit 2", "Unit 3"] },
     7: { name: "Universal Human Values & Professional Ethics", units: ["Unit 1", "Unit 2", "Unit 3"] },
-    8: { name: "Biology for Engineers", units: ["Unit 1", "Unit 2", "Unit 3"] }
+    8: { name: "Biology for Engineers", units: ["Unit 1", "Unit 2", "Unit 3"] },
+    9: { name: "Applied Digital Logic Design", units: ["Unit 1", "Unit 2", "Unit 3", "Unit 4", "Unit 5"] }
 };
 
 // ============================================
@@ -8377,7 +8383,129 @@ const questionDatabase = {
     "correct": 0
   }
 ]
-} 
+}, 
+//Applied Digital Logic Design
+9: {
+    //UNIT 1
+    1: [
+      { q: "Digital signals are preferred over analog signals in computers because:", options: ["They are continuous", "They are immune to noise", "They are slower", "They use infinite levels of voltage"], correct: 1 },
+      { q: "The binary equivalent of the decimal number 13 is:", options: ["1011", "1101", "1001", "1110"], correct: 1 },
+      { q: "Which of the following is a valid octal number?", options: ["178", "88", "725", "91"], correct: 2 },
+      { q: "The hexadecimal number 1A is equivalent to the decimal:", options: ["26", "27", "18", "16"], correct: 0 },
+      { q: "What is the result of 1011 + 1101 in binary?", options: ["10111", "11000", "11100", "10000"], correct: 1 },
+      { q: "What is 1101 - 101 in binary?", options: ["1000", "1010", "1110", "1001"], correct: 0 },
+      { q: "Which logic gate gives a HIGH output only when all inputs are HIGH?", options: ["OR", "NAND", "AND", "XOR"], correct: 2 },
+      { q: "The output of a NOT gate is:", options: ["Always 1", "The same as the input", "The complement of the input", "0 if input is 0"], correct: 2 },
+      { q: "According to Boolean algebra, A + A = ?", options: ["0", "A", "1", "A'"], correct: 1 },
+      { q: "A don’t care condition (X) can be treated as:", options: ["Always 0", "Always 1", "Either 0 or 1, based on simplification", "Eliminated"], correct: 2 },
+      { q: "A completely specified function means:", options: ["Don’t care conditions are present", "All input combinations have defined output", "Some outputs are unknown", "No inputs are present"], correct: 1 },
+      { q: "Incompletely specified Boolean functions are represented using:", options: ["Only minterms", "Don’t care conditions", "Binary only", "SOP form only"], correct: 1 },
+      { q: "What is the binary equivalent of the octal number 17?", options: ["1111", "11001", "10001", "1000"], correct: 2 },
+      { q: "Which logic gate gives a LOW output only when all inputs are HIGH?", options: ["NAND", "NOR", "XOR", "XNOR"], correct: 0 },
+      { q: "“Don’t care” conditions in Boolean expressions are used for:", options: ["Increasing circuit cost", "Optimising the logic function", "Removing minterms", "Adding extra inputs"], correct: 1 },
+      { q: "Convert the hexadecimal number 3F.A to its binary equivalent:", options: ["111111.101", "111111.110", "111110.101", "111111.111"], correct: 0 },
+      { q: "The output of the logic circuit with inputs A, B, and C connected to a NAND gate, followed by a NOT gate, is equivalent to:", options: ["A + B + C", "ABC", "A ⊕ B ⊕ C", "A' + B' + C'"], correct: 1 },
+      { q: "What is the hexadecimal equivalent of the binary number 11110110.1101?", options: ["F6.D", "E7.6", "D7.1", "F5.C"], correct: 0 },
+      { q: "What is the number of minterms in a 4-variable Boolean function?", options: ["4", "8", "16", "32"], correct: 2 },
+      { q: "Which of the following is true about analog signals?", options: ["They have discrete values", "They represent data using binary numbers", "They vary continuously over time", "They are only used in computers"], correct: 2 },
+    ], 
+
+    //UNIT 2
+    2: [
+      { q: "What is the simplified form of the Boolean expression: A + AB", options: ["B", "A", "AB", "A + B"], correct: 1 },
+      { q: "Which of the following is a valid group in a K-map?", options: ["3 adjacent 1s", "Diagonal grouping", "2, 4, or 8 adjacent 1s", "Random 1s"], correct: 2 },
+      { q: "What is the simplified expression from a 3-variable K-map for A,B, C with minterms 1, 3, 5, and 7?", options: ["A'B'", "B", "C", "B + C"], correct: 2 },
+      { q: "The Quine-McCluskey method is also known as:", options: ["Algebraic method", "Tabular method", "Karnaugh method", "DeMorgan method"], correct: 1 },
+      { q: "The function F = A' + B can be implemented using:", options: ["NOT and OR gates", "AND and NOT gates", "NOR only", "NAND only"], correct: 0 },
+      { q: "What is the complement of the Boolean expression A + B?", options: ["A' + B'", "AB", "A'B'", "A + B'"], correct: 2 },
+      { q: "A 4-variable K-map has how many cells?", options: ["8", "16", "32", "64"], correct: 1 },
+      { q: "Which of the following is not a valid group in a 4-variable K-map?", options: ["1 cell", "2 cells", "5 cells", "8 cells"], correct: 2 },
+      { q: "In Quine-McCluskey, a table entry with two '-'s represents:", options: ["One minterm", "Two minterms", "Four minterms", "Don’t care term"], correct: 2 },
+      { q: "Universal gates can be used to build:", options: ["Any logic circuit", "Only SOP forms", "Only combinational logic", "Only arithmetic circuits"], correct: 0 },
+      { q: "Which of the following statements is true regarding the function F=AB+A′B+AB′+A'B'?", options: ["F is always equal to 1", "F = A + B", "F simplifies to A + B", "F simplifies to A ⊕ B"], correct: 0 },
+      { q: "The circuit implementing F=A′B+AB′ is called:", options: ["XNOR", "NOR", "XOR", "NAND"], correct: 2 },
+      { q: "In the Quine-McCluskey method, what is the significance of a term that covers both minterm 5 (0101) and minterm 7 (0111)?", options: ["Difference in 2 bits", "Invalid pairing", "Valid pairing with one variable eliminated", "Group with don’t care"], correct: 2 },
+      { q: "A group of eight 1s in a 4-variable K-map represents:", options: ["A single literal", "A product term with two literals", "A don’t care", "A constant 1"], correct: 0 },
+      { q: "A function F(A,B,C) has minterms 0, 1, 2, 5, and don’t-care terms 3, 7. What is the minimized expression using K-map?", options: ["A'C'+B", "A'+B", "A'C+B'C'", "A'+C"], correct: 3 },
+      { q: "In the Quine-McCluskey method, the initial grouping is based on:", options: ["Output values", "Number of variables", "Number of 1’s in the binary representation of minterms", "Prime implicants"], correct: 2 },
+      { q: "The Quine-McCluskey method is primarily used for:", options: ["Converting binary to decimal", "Simplifying Boolean expressions", "Designing flip-flops", "Building combinational circuits"], correct: 1 },
+      { q: "What is the output of the Boolean function F = A.(B + C) when A = 1, B = 0, and C = 1?", options: ["0", "1", "Undefined", "Cannot be determined"], correct: 1 },
+      { q: "Which of the following is true about group formation in K-maps?", options: ["Groups must include diagonal cells", "Groups can include only 2 minterms", "Groups must be powers of 2", "Groups can overlap only once"], correct: 2 },
+      { q: "Simplify the expression using Boolean algebra: AB + A'B + AB'", options: ["A + B", "B' + A'", "A ⊕ B", "A + B'"], correct: 0 },  
+    ],
+
+    //UNIT 3
+    3: [
+      { q: "A combinational circuit has:", options: ["Memory elements", "Feedback paths", "No memory and no feedback", "Clock signal to control output"], correct: 2 },
+      { q: "The basic building blocks of combinational logic include:", options: ["Flip-flops", "Latches", "Logic gates", "Registers"], correct: 2 },
+      { q: "A half adder has how many inputs and outputs?", options: ["2 inputs, 1 output", "2 inputs, 2 outputs", "1 input, 2 outputs", "3 inputs, 1 output"], correct: 1 },
+      { q: "The output expressions for a half adder are:", options: ["Sum = A XOR B; Carry = A AND B", "Sum = A OR B; Carry = A AND B", "Sum = A XOR B; Carry = A OR B", "Sum = A AND B; Carry = A OR B"], correct: 0 },
+      { q: "Which gate combination best describes the carry-out of a full adder?", options: ["AB + BC + AC", "A ⊕ B", "A ⊕ B ⊕ Cin", "A + B + C"], correct: 0 },
+      { q: "A 4-bit parallel adder adds:", options: ["4 bits to a 1-bit number", "4 bits + 4 bits", "2 bits at a time", "1 bit per clock"], correct: 1 },
+      { q: "A half subtractor produces:", options: ["Difference and Sum", "Difference and Borrow", "Carry and Sum", "Borrow and Carry"], correct: 1 },
+      { q: "In a half subtractor, the borrow output is:", options: ["A'B", "AB'", "A XOR B", "A AND B"], correct: 0 },
+      { q: "Which of the following is not an output of a comparator?", options: ["A = B", "A > B", "A < B", "A XOR B"], correct: 3 },
+      { q: "A 4-bit comparator compares:", options: ["One 4-bit input with 1-bit", "Two 4-bit binary numbers", "Four 1-bit numbers", "Two decimal numbers"], correct: 1 },
+      { q: "A 3-to-8 line decoder has:", options: ["3 inputs and 8 outputs", "8 inputs and 3 outputs", "3 inputs and 3 outputs", "8 inputs and 1 output"], correct: 0 },
+      { q: "An 8-to-3 encoder has:", options: ["8 inputs, 3 outputs", "3 inputs, 8 outputs", "3 inputs, 3 outputs", "2 outputs, 4 inputs"], correct: 0 },
+      { q: "A multiplexer:", options: ["Selects one input from many inputs", "Sends multiple outputs to one input", "Adds two binary numbers", "Compares two numbers"], correct: 0 },
+      { q: "A 4-to-1 multiplexer has how many select lines?", options: ["1", "2", "3", "4"], correct: 1 },
+      { q: "The number of input lines in an 8:1 multiplexer is:", options: ["8", "3", "4", "2"], correct: 0 },
+      { q: "A multiplexer works as a:", options: ["Data distributor", "Data selector", "Decoder", "Comparator"], correct: 1 },
+      { q: "A 16-to-1 multiplexer has how many select lines?", options: ["3", "4", "5", "2"], correct: 1 },
+      { q: "A multiplexer can be used to implement:", options: ["Latches", "Flip-flops", "Any combinational function", "Only parity generator"], correct: 2 },
+      { q: "The output of a half subtractor when A = 0 and B = 1 is:", options: ["Diff = 1, Borrow = 1", "Diff = 0, Borrow = 1", "Diff = 1, Borrow = 0", "Diff = 0, Borrow = 0"], correct: 0 },
+      { q: "Combinational circuits are defined as those whose output:", options: ["Depends on both present and past inputs", "Depends only on current inputs", "Depends only on clock pulses", "Depends on feedback"], correct: 1 },
+    ],
+
+    //UNIT 4
+    4: [
+      { q: "The main difference between a latch and a flip-flop is:", options: ["Clock dependency", "Output type", "Number of inputs", "Number of states"], correct: 0 },
+      { q: "In an SR latch made from NOR gates, if S = 1 and R = 0, the output is:", options: ["Q = 1, Q’ = 0", "Q = 0, Q’ = 1", "Q = Q’ = 1", "Q = Q’ = 0"], correct: 0 },
+      { q: "What is the characteristic equation of the SR flip-flop?", options: ["Q+ = R + S", "Q+ = Q", "Q+ = S + R'Q", "Q+ = S + R'"], correct: 2 },
+      { q: "The purpose of the master-slave configuration is to:", options: ["Reduce cost", "Prevent the race-around condition", "Increase speed", "Increase invalid states"], correct: 1 },
+      { q: "Which equation correctly describes the next state of a T flip-flop?", options: ["Q+ = Q", "Q+ = D", "Q+ = T ⊕ Q", "Q+ = T + Q"], correct: 2 },
+      { q: "If T = 1 in a T flip-flop, what is the next output state?", options: ["Set", "Reset", "No change", "Toggle"], correct: 3 },
+      { q: "The expression Q+ = Q indicates that:", options: ["The flip-flop toggles", "The output remains unchanged", "The flip-flop resets", "The flip-flop sets"], correct: 1 },
+      { q: "In a JK flip-flop, if J and K inputs remain high for a long duration, what will happen?", options: ["Flip-flop will latch", "Flip-flop will toggle continuously", "Outputs freeze", "Nothing"], correct: 1 },
+      { q: "From the characteristic equation of a JK flip-flop, deduce Q+ if Q = 1, J = 1, K = 0.", options: ["1", "0", "Toggle", "Invalid"], correct: 0 },
+      { q: "What is the output of a JK flip-flop with J = 0, K = 1, and initial state Q = 1?", options: ["0", "1", "Toggles", "Undefined"], correct: 0 },
+      { q: "The JK flip-flop behaves like a T flip-flop when:", options: ["J = 1, K = 0", "J = K = 1", "J = 0, K = 1", "J = K = 0"], correct: 1 },
+      { q: "To convert a SR flip-flop to a D flip-flop, connect:", options: ["S = D, R = D’", "S = D, R = 0", "S = D’, R = D", "S= 1, R= 1"], correct: 0 },
+      { q: "The characteristic equation of a D flip-flop is:", options: ["Q+ = D", "Q+ = T ⊕ Q", "Q+ = JQ' + K'Q", "Q+ = S + R'"], correct: 0 },
+      { q: "A bistable element is a circuit that has:", options: ["One stable state", "Two stable states", "No stable state", "Multiple outputs"], correct: 1 },
+      { q: "A D flip-flop eliminates the invalid state of:", options: ["SR flip-flop", "JK flip-flop", "T flip-flop", "Master-slave"], correct: 0 },
+      { q: "The slave in a master-slave JK flip-flop is enabled when:", options: ["The clock is HIGH", "The Clock is LOW", "The clock is toggled", "The clock is stable"], correct: 1 },
+      { q: "If T = 0 in a T flip-flop, what is the next output state?", options: ["Set", "Reset", "No change", "Toggle"], correct: 2 },
+      { q: "In an SR latch made from NOR gates, if S = 0 and R = 1, the output is:", options: ["Q = 1, Q’ = 0", "Q = 0, Q’ = 1", "Q = Q’ = 1", "Q = Q’ = 0"], correct: 1 },
+      { q: "JK flip-flops are preferred over SR flip-flops because:", options: ["They are cheaper", "They eliminate race conditions", "They eliminate the invalid state", "They are faster"], correct: 2 },
+      { q: "A bistable circuit can be used as:", options: ["Decoder", "Counter", "Memory element", "Comparator"], correct: 2 },
+    ],
+
+    //UNIT 5
+    5: [
+      { q: "In a serial-in serial-out (SISO) shift register using D flip-flops, data is:", options: ["Loaded in parallel and retrieved in serial", "Loaded in serial and retrieved in serial", "Loaded in parallel and retrieved in parallel", "Randomly loaded and retrieved"], correct: 1 },
+      { q: "In a right shift register using D flip-flops, data moves:", options: ["From right to left", "From left to right", "Bi-directionally", "Randomly"], correct: 1 },
+      { q: "A synchronous MOD-16 counter uses how many flip-flops?", options: ["4", "3", "5", "6"], correct: 0 },
+      { q: "A MOD-5 synchronous counter cycles through how many states?", options: ["4", "10", "6", "5"], correct: 3 },
+      { q: "Synchronous counter design often uses Karnaugh maps to:", options: ["Store logic", "Identify hazards", "Simplify D/T input logic", "Generate toggles"], correct: 2 },
+      { q: "A synchronous counter designed using D flip-flops counts 000 → 001 → 010 → 011. This is:", options: ["MOD-3", "MOD-4", "MOD-2", "Ring counter"], correct: 1 },
+      { q: "For a MOD-6 counter using T flip-flops, how many flip-flops are required?", options: ["2", "3", "4", "6"], correct: 1 },
+      { q: "Which is true about synchronous counters?", options: ["Trigger on random edges", "No timing control", "All flip-flops are triggered at the same time", "Require fewer gates than ripple"], correct: 2 },
+      { q: "For a synchronous 4-bit up-counter using T flip-flops, the T inputs should be:", options: ["All 1", "T₀ = 1, T₁ = Q₀, T₂ = Q₀·Q₁, T₃ = Q₀·Q₁·Q₂", "T = Q", "Tied to ground"], correct: 1 },
+      { q: "In a synchronous counter, all flip-flops are triggered by:", options: ["Their Q output", "Feedback logic", "A ring oscillator", "The same clock signal"], correct: 3 },
+      { q: "A 3-bit ripple down-counter using T flip-flops starts at 111. Next state?", options: ["000", "110", "001", "011"], correct: 1 },
+      { q: "What is the T input for each T flip-flop in a binary ripple counter?", options: ["1", "0", "Tied to Q of the previous", "Alternating 1 and 0"], correct: 0 },
+      { q: "In a ripple counter, each flip-flop is triggered by:", options: ["A global clock", "Its clock", "The output of the previous flip-flop", "Tied to logic 1"], correct: 2 },
+      { q: "In an asynchronous 3-bit up-counter using T flip-flops, how many states are possible?", options: ["4", "6", "8", "16"], correct: 2 },
+      { q: "An asynchronous counter is also called:", options: ["Ripple counter", "Ring counter", "Binary counter", "Modulo counter"], correct: 0 },
+      { q: "Which type of shift register can perform both left and right shifts?", options: ["SISO", "PIPO", "SIPO", "Bidirectional"], correct: 3 },
+      { q: "A parallel-in, parallel-out (PIPO) shift register behaves like:", options: ["Memory", "Counter", "Encoder", "Demux"], correct: 0 },
+      { q: "The output of each D flip-flop in a shift register is connected to:", options: ["The clock input of the next", "The D input of the next", "The Q' of the previous", "Ground"], correct: 1 },
+      { q: "In a shift register, which flip-flop is best suited?", options: ["T", "D", "SR", "JK"], correct: 1 },
+      { q: "A 4-bit shift register using D flip-flops can store:", options: ["2 bits", "8 bits", "4 bits", "16 bits"], correct: 2 },
+    ]
+  } 
 };
 let currentSubject = 1;
 let currentUnit = 1;
