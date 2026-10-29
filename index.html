@@ -921,7 +921,58 @@ const questionDatabase = {
             { q: "What type of methods does an interface contain by default?", options: ["abstract", "static", "final", "private"], correct: 0 },
             { q: "What will happen if we provide concrete implementation of the method in the interface?", options: ["The concrete class implementing that method need not provide implementation of that method.", "A runtime exception is thrown.", "Compilation failure", "A method not found exception is thrown."], correct: 2 },
             { q: "What happens when a constructor is defined for an interface?", options: ["Compilation failure", "Runtime Exception", "The interface compiles successfully.", "The implementing class will throw an exception."], correct: 0 }
-        ]       
+        ],
+
+        3: [
+            { q: "What is the primary purpose of exception handling in Java?", options: ["To catch syntax errors in the code", "To provide a mechanism to handle runtime errors and continue program execution", "To terminate a program immediately upon encountering an error", "To enhance code readability"], correct: 1 },
+            { q: "Which of the following classes is the superclass of all exceptions in Java?", options: ["Error", "Throwable", "Exception", "RuntimeException"], correct: 1 },
+            { q: "Which keyword is used to define an exception handling block?", options: ["catch", "handle", "try", "throw"], correct: 2 },
+            { q: "What happens if an exception is not caught in a program?", options: ["The program terminates abruptly", "The exception is ignored", "The exception is caught by the JVM", "The program continues to execute normally"], correct: 0 },
+            { q: "Which of the following exceptions is thrown when a division by zero occurs?", options: ["ArithmeticException", "NullPointerException", "ArrayIndexOutOfBoundsException", "ClassCastException"], correct: 0 },
+            { q: "Which of the following is true about the `finally` block?", options: ["It executes only if an exception is thrown", "It is optional and executes regardless of whether an exception is thrown or not", "It must immediately follow a `try` block", "It can contain another `try` block"], correct: 1 },
+            { q: "What will be the output of the following code?\ntry {\n    int[] arr = new int[5];\n    arr[5] = 10;\n} catch (ArrayIndexOutOfBoundsException e) {\n    System.out.println(\"Array index out of bounds\");\n} finally {\n    System.out.println(\"Finally block executed\");\n}", options: ["Array index out of bounds", "Finally block executed", "Array index out of bounds followed by Finally block executed", "Runtime error"], correct: 2 },
+            { q: "Which exception is thrown when an object is attempted to be cast to a subclass it is not an instance of?", options: ["ClassCastException", "IllegalArgumentException", "ArrayStoreException", "IllegalStateException"], correct: 0 },
+            { q: "Which of the following is not an unchecked exception?", options: ["NullPointerException", "IOException", "ArithmeticException", "ArrayIndexOutOfBoundsException"], correct: 1 },
+            { q: "Which keyword is used to throw an exception manually?", options: ["throws", "throw", "Try", "catch"], correct: 1 },
+            { q: "Which method is used to retrieve the detailed message of an exception?", options: ["printStackTrace()", "getMessage()", "toString()", "getCause()"], correct: 1 },
+            { q: "What type of exceptions can be caught by the `catch` block?", options: ["Only unchecked exceptions", "Only checked exceptions", "Both checked and unchecked exceptions", "Only runtime exceptions"], correct: 2 },
+            { q: "Which of the following blocks should be used to close resources like file streams in Java?", options: ["catch", "finally", "try", "throw"], correct: 1 },
+            { q: "What will happen if an exception is thrown inside a `finally` block?", options: ["The program terminates immediately", "The exception is ignored", "The exception propagates up the call stack", "It overrides any exception thrown in the `try` or `catch` blocks"], correct: 2 },
+            { q: "What will happen if a catch block itself throws an exception and there is no corresponding catch block for the new exception?", options: ["The program will terminate immediately without executing the ‘finally’ block.", "The program will continue to the next ‘catch’ block, if present, for handling the new exception.", "The ‘finally’ block will execute before the program terminates due to the unhandled exception.", "The original exception will be re-thrown, and the ‘finally’ block will be skipped."], correct: 2 },
+            { q: "Thread priority in Java is?", options: ["Integer", "Float", "double", "long"], correct: 0 },
+            { q: "What is a thread in Java?", options: ["A lightweight process that runs independently within a program", "A data structure to store variables", "A type of loop", "A memory allocation unit in Java"], correct: 0 },
+            { q: "Which interface is used to create a thread in Java?", options: ["Processor", "Executor", "Threadable", "Runnable"], correct: 3 },
+            { q: "Which class is used to create a thread in Java?", options: ["Thread", "Runnable", "Process", "Executor"], correct: 0 },
+            { q: "How can synchronization be achieved in Java threads?", options: ["Using the synchronized keyword", "Using the volatile keyword", "Using the final keyword.", "Using the static keyword"], correct: 0 },
+            { q: "What is the purpose of the join() method in Java threads?", options: ["To interrupt the execution of a thread", "To wait for a thread to finish its execution", "To schedule the execution of a thread", "To notify a thread to stop execution"], correct: 1 },
+            { q: "Which method is used to start the execution of a thread?", options: ["start()", "run()", "execute()", "begin()"], correct: 0 },
+            { q: "What is the maximum number of threads that can be created in a Java program?", options: ["There is no fixed limit", "It depends on the amount of available memory", "It depends on the number of CPU cores.", "It is limited to 100 threads."], correct: 0 },
+            { q: "What is the main advantage of multithreading in Java?", options: ["Improved program performance", "Simplified program structure", "Reduced memory usage", "Elimination of runtime errors"], correct: 0 },
+            { q: "In Java, what is the purpose of the sleep() method in threads?", options: ["It terminates all threads in the program", "It pauses the execution of the current thread for a specified duration", "It resumes the execution of a thread", "It pauses the execution of all threads"], correct: 1 },
+            { q: "What is the main thread in a Java program?", options: ["A thread created by the user", "The first thread that executes when a program starts", "A thread that runs only when other threads have completed", "A thread that manages system resources"], correct: 1 },
+            { q: "What does the isAlive() method do?", options: ["Checks if a thread has completed execution", "Checks if a thread is paused", "Checks if a thread is running", "Checks if a thread is waiting"], correct: 2 },
+            { q: "What is the default priority of a thread in Java?", options: ["1", "5", "7", "10"], correct: 1 },
+            { q: "When is it necessary to synchronize code in Java?", options: ["When multiple threads access mutable shared resources", "When a single thread accesses immutable resources", "When threads run in parallel without shared data", "When threads perform I/O operations"], correct: 0 },
+            { q: "What is the output of the following code?\nclass MyThread extends Thread {\n    public void run() {\n        for(int i = 0; i < 5; i++) {\n            System.out.println(i);\n        }\n    }\n}\npublic class Main {\n    public static void main(String[] args) {\n        MyThread t = new MyThread();\n        t.run();\n        t.start();\n    }\n}", options: ["0 1 2 3 4 printed twice", "0 1 2 3 4 printed once", "Compilation error", "0 1 2 3 4 printed once, then a runtime exception"], correct: 0 }
+        ],
+
+        4: [
+            { q: "Which method is used to create a new file in Java?", options: ["File.newFile()", "File.createNewFile()", "File.makeFile()", "File.writeFile()"], correct: 1 },
+            { q: "How do you check if a file exists in Java?", options: ["File.isExist()", "File.exists()", "File.isFile()", "File.checkFile()"], correct: 1 },
+            { q: "Which method in the File class is used to delete a file?", options: ["remove()", "deleteFile()", "delete()", "erase()"], correct: 2 },
+            { q: "What does the length() method of the File class return?", options: ["The number of lines in the file", "The number of words in the file", "The size of the file in bytes", "The number of characters in the file"], correct: 2 },
+            { q: "Which method would you use to list all the files in a directory in Java?", options: ["listFiles()", "getFiles()", "allFiles()", "readFiles()"], correct: 0 },
+            { q: "What is the return type of the renameTo() method in the File class?", options: ["void", "boolean", "int", "String"], correct: 1 },
+            { q: "Which stream is typically used for reading text files in Java?", options: ["FileInputStream", "ObjectInputStream", "FileReader", "DataInputStream"], correct: 2 },
+            { q: "What does the mkdir() method do in the File class?", options: ["Creates a new directory", "Deletes a directory", "Lists the contents of a directory", "Renames a directory"], correct: 0 },
+            { q: "Which method is used to check if a file is a directory in Java?", options: ["isFile()", "isDirectory()", "isFolder()", "isDir()"], correct: 1 },
+            { q: "How can you create a temporary file in Java?", options: ["File.createTempFile()", "File.createTemp()", "File.makeTempFile()", "File.createFile()"], correct: 0 },
+            { q: "Which of these packages contains all the classes and methods required for event handling in Java?", options: ["java.applet", "java.event", "java.awt", "java.awt.event"], correct: 3 },
+            { q: "Which of these methods are used to register a keyboard event listener?", options: ["KeyListener()", "addKeyListener()", "addKistener()", "eventKeyboardListener()"], correct: 1 },
+            { q: "Which of these methods are used to register a mouse motion listener?", options: ["addMouse()", "addMouseListener()", "addMouseMotionListner()", "eventMouseMotionListener()"], correct: 2 },
+            { q: "Event class is defined in which of these libraries?", options: ["java.io", "java.lang", "java.net", "java.awt.event"], correct: 3 },
+            { q: "Which of these class is super class of all the events?", options: ["EventObject", "EventClass", "ActionEvent", "ItemEvent"], correct: 0 }
+        ]
     },
     6: {
         1: [
